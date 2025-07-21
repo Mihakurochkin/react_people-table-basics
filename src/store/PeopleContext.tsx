@@ -7,7 +7,6 @@ type PeopleContextType = {
   isLoading: boolean;
   isError: boolean;
   isPeople: boolean;
-  setPeople: (people: Person[]) => void;
 };
 
 export const PeopleContext = createContext<PeopleContextType>({
@@ -15,7 +14,6 @@ export const PeopleContext = createContext<PeopleContextType>({
   isLoading: true,
   isError: false,
   isPeople: true,
-  setPeople: () => {},
 });
 
 export const PeopleProvider = ({ children }: { children: React.ReactNode }) => {
@@ -41,9 +39,6 @@ export const PeopleProvider = ({ children }: { children: React.ReactNode }) => {
     isLoading,
     isError,
     isPeople: people.length > 0,
-    setPeople,
-    setIsLoading,
-    setIsError,
   };
 
   return (
