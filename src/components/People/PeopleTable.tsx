@@ -54,7 +54,9 @@ export const PeopleTable = () => {
                 <td>
                   {person.motherName ? (
                     people.find(p => p.name === person.motherName) ? (
-                      <PersonLink person={person} />
+                      <PersonLink
+                        person={people.find(p => p.name === person.motherName)!}
+                      />
                     ) : (
                       person.motherName
                     )
@@ -65,7 +67,9 @@ export const PeopleTable = () => {
                 <td>
                   {person.fatherName ? (
                     people.find(p => p.name === person.fatherName) ? (
-                      <PersonLink person={person} />
+                      <PersonLink
+                        person={people.find(p => p.name === person.fatherName)!}
+                      />
                     ) : (
                       person.fatherName
                     )
