@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
-export const Nav = () => (
+export const Navbar = () => (
   <nav
     data-cy="nav"
     className="navbar is-fixed-top has-shadow"

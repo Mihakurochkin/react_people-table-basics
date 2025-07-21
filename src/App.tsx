@@ -1,10 +1,10 @@
 import './App.scss';
-import { Nav } from './components/Nav';
+import { Navbar } from './components/Navbar';
 import { Outlet } from 'react-router-dom';
 
 export const App = () => (
   <div data-cy="app">
-    <Nav />
+    <Navbar />
 
     <main className="section">
       <Outlet />
